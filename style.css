@@ -454,14 +454,14 @@ body {
     }
 }
 
-/* Mobile Specific (Phones) */
-@media (max-width: 768px) {
+/* Mobile Specific (Phones & Tablets) */
+@media (max-width: 1024px) {
     .navbar {
         padding: 1rem 5%;
     }
 
     .nav-links {
-        display: none; /* Hide standard links */
+        display: none !important; /* Force hide standard links */
         position: fixed;
         top: 70px;
         left: 0;
@@ -475,7 +475,7 @@ body {
     }
 
     .nav-links.active {
-        display: flex;
+        display: flex !important;
     }
 
     .menu-toggle {
