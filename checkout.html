@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="sr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA | Porudžbina</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .checkout-container {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 2.5rem;
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        .success-icon {
+            font-size: 4rem;
+            color: #10b981;
+            margin-bottom: 1.5rem;
+        }
+
+        .checkout-container h1 {
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .checkout-container p {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .order-summary {
+            text-align: left;
+            margin-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 2rem;
+        }
+
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+        }
+
+        .summary-total {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .back-home {
+            display: inline-block;
+            margin-top: 2.5rem;
+            padding: 1rem 2rem;
+            background-color: var(--accent);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .back-home:hover {
+            background-color: var(--accent-hover);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">AURA</a></div>
+        <nav class="nav-links">
+            <a href="index.html">Početna</a>
+            <a href="documentationAura.pdf" download>Dokumentacija</a>
+            <a href="aura-projekat.zip" download>ZIP</a>
+            <a href="author.html">Autor</a>
+            <a href="kontakt.html">Kontakt</a>
+        </nav>
+    </header>
+
+    <main class="container" style="display: block;">
+        <div class="checkout-container">
+            <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+            <h1>Uspešna porudžbina!</h1>
+            <p>Hvala Vam na poverenju. Vaša porudžbina je primljena i biće poslata u najkraćem mogućem roku.</p>
+
+            <div id="order-details" class="order-summary">
+                <!-- Data from localStorage -->
+            </div>
+
+            <a href="index.html" class="back-home">Nazad na prodavnicu</a>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const orderDetails = document.getElementById('order-details');
+            const cart = JSON.parse(localStorage.getItem('aura_cart')) || [];
+
+            if (cart.length === 0) {
+                orderDetails.innerHTML = '<p>Nema detalja o porudžbini.</p>';
+                return;
+            }
+
+            let total = 0;
+            let html = '<h3>Rezime porudžbine:</h3>';
+
+            cart.forEach(item => {
+                const itemTotal = (item.price * 117) * item.quantity;
+                total += itemTotal;
+                html += `
+                    <div class="summary-item">
+                        <span>${item.name} (x${item.quantity}) - ${item.selectedSize || 'Standard'}</span>
+                        <span>${itemTotal.toFixed(2).replace('.', ',')} RSD</span>
+                    </div>
+                `;
+            });
+
+            html += `
+                <div class="summary-total">
+                    <span>Ukupno za uplatu:</span>
+                    <span>${total.toFixed(2).replace('.', ',')} RSD</span>
+                </div>
+            `;
+
+            orderDetails.innerHTML = html;
+
+            // Isprazni korpu nakon uspešne porudžbine
+            // localStorage.removeItem('aura_cart'); 
+        });
+    </script>
+</body>
+
+</html>

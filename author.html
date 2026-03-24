@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="sr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA | Autor</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .author-container {
+            max-width: 500px;
+            margin: 4rem auto;
+            padding: 2.5rem;
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        .author-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+            border: 4px solid var(--border-color);
+        }
+
+        .author-name {
+            font-size: 1.75rem;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .author-info {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.25rem;
+        }
+
+        .author-index {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--accent);
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background-color: var(--bg-color);
+            display: inline-block;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">AURA</a></div>
+        <nav class="nav-links">
+            <a href="index.html">Početna</a>
+            <a href="documentationAura.pdf" download>Dokumentacija</a>
+            <a href="aura-projekat.zip" download>ZIP</a>
+            <a href="author.html" style="color: var(--accent); font-weight: 600;">Autor</a>
+            <a href="kontakt.html">Kontakt</a>
+        </nav>
+        <div class="nav-right">
+            <a href="index.html" style="text-decoration: none; color: var(--text-primary); font-weight: 500;">
+                <i class="fa-solid fa-arrow-left"></i> Nazad
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container" style="display: block;">
+        <div class="author-container">
+            <!-- Menjačete sliku ovde kada je ubacite -->
+            <img src="images/autor-slika.jpg" alt="Slika autora" class="author-image"
+                onerror="this.src='https://placehold.co/400x400/eee/31343c?text=Slika+Autora'">
+
+            <h1 class="author-name">Boris Jonas</h1>
+            <p class="author-info">Zdravo, ja sam Boris iz Srbije, iz mesta Kovačica. Imam 21 godinu i student sam druge
+                godine na Visokoj ICT školi, smer Informacione tehnologije.<br><br>Završio sam Poljoprivrednu školu u
+                Pančevu. U slobodno vreme volim da čitam knjige, treniram u teretani i slušam muziku.</p>
+
+            <div class="author-index">Broj Indeksa: 37/24</div>
+        </div>
+    </main>
+</body>
+
+</html>

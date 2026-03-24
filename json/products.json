@@ -1,0 +1,130 @@
+[
+  {
+    "id": 1,
+    "name": "Bela Majica",
+    "price": 25.00,
+    "category": "T-Shirts",
+    "image": "images/bela-majica.avif",
+    "description": "Klasična i prijatna bela pamučna majica za svakodnevno nošenje."
+  },
+  {
+    "id": 2,
+    "name": "Teksas Jakna",
+    "price": 89.99,
+    "category": "Outerwear",
+    "image": "images/texas-jakna.jpg",
+    "description": "Neprolazna plava teksas jakna, savršena za opuštene prolećne dane."
+  },
+  {
+    "id": 3,
+    "name": "Urbane Pantalone",
+    "price": 60.00,
+    "category": "Pants",
+    "image": "images/urban-pantalone.jpg",
+    "description": "Moderne pantalone u streetwear stilu sa dzepovima sa strane."
+  },
+  {
+    "id": 4,
+    "name": "Beli dzemper",
+    "price": 75.50,
+    "category": "Sweaters",
+    "image": "images/beli-dzemper.avif",
+    "description": "Retro dzemper sa logom, čuveni 'Stara Garda' klasik."
+  },
+  {
+    "id": 5,
+    "name": "Crni dzemper",
+    "price": 55.00,
+    "category": "Outerwear",
+    "image": "images/crni-dzemper.jpg",
+    "description": "Veoma topao i mekan crni duks pamučne izrade."
+  },
+  {
+    "id": 6,
+    "name": "Adidas sorc",
+    "price": 35.00,
+    "category": "Pants",
+    "image": "images/adidas-sorc.jpg",
+    "description": "Komforan lagan donji deo trenerke, autentičan zemunski stil."
+  },
+  {
+    "id": 7,
+    "name": "Crvena Majica",
+    "price": 30.00,
+    "category": "T-Shirts",
+    "image": "images/red-varijanta.jpg",
+    "description": "Atraktivna crvena majica, odlična za izlaske i uklapanje."
+  },
+  {
+    "id": 8,
+    "name": "Zuti dzemper",
+    "price": 95.00,
+    "category": "Sweaters",
+    "image": "images/zuti-dzemper.avif",
+    "description": "Gornji deo trenerke u retro fazonu. Pun pogodak za ljubitelje vintage odeće."
+  },
+  {
+    "id": 9,
+    "name": "Bela Majica sa Printom",
+    "price": 22.00,
+    "category": "T-Shirts",
+    "image": "images/bela-majica2.avif",
+    "description": "Bela majica sa dizajnom i autentičnim logotipom preko grudi."
+  },
+  {
+    "id": 10,
+    "name": "Oversized Crni Duks",
+    "price": 100.00,
+    "category": "Outerwear",
+    "image": "images/crnadukserica.jpg",
+    "description": "Vrhunski crni duks širokog kroja (oversized) od teškog pamuka."
+  },
+  {
+    "id": 11,
+    "name": "Streetwear Kargo Trenerka",
+    "price": 55.00,
+    "category": "Pants",
+    "image": "images/kargo-pantalone.webp",
+    "description": "Zgodna urbana trenerka blago spuštenog kroja za ultimativnu opuštenost."
+  },
+  {
+    "id": 12,
+    "name": "Plavi dzemper",
+    "price": 110.00,
+    "category": "Sweaters",
+    "image": "images/plavi-dzemper.jpg",
+    "description": "Upečatljiv sivi gornji deo, 'Munze Konza' edicija."
+  },
+  {
+    "id": 13,
+    "name": "Siva Majica",
+    "price": 35.00,
+    "category": "T-Shirts",
+    "image": "images/siva-majica-2.jpg",
+    "description": "Udobna i rastegljiva klasicna siva majica neutralne boje."
+  },
+  {
+    "id": 14,
+    "name": "Oversized Crna Jakna / Duks",
+    "price": 65.00,
+    "category": "Outerwear",
+    "image": "images/crna-jakna.jpg",
+    "description": "Idealno za hladnije večeri. Poseduje prostrane džepove na stomaku."
+  },
+  {
+    "id": 15,
+    "name": "Urban Donji Deo",
+    "price": 40.00,
+    "category": "Pants",
+    "image": "images/urban-donji-deo.webp",
+    "description": "Deo moderne kolekcije donjih delova za napolje."
+  },
+  {
+    "id": 16,
+    "name": "Crveni Džemper",
+    "price": 50.00,
+    "category": "Sweaters",
+    "image": "images/crveni-dzemper.jpg",
+    "description": "Kvalitetan dugačak rukav u crvenkastoj nijansi za prelazan period."
+  }
+]

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA | Premium Clothing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">AURA</div>
+        <nav class="nav-links">
+            <a href="documentationAura.pdf" download>Dokumentacija</a>
+            <a href="aura-projekat.zip" download>ZIP</a>
+            <a href="author.html">Autor</a>
+            <a href="kontakt.html">Kontakt</a>
+        </nav>
+        <div class="nav-right">
+            <button class="cart-btn" id="cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="cart-badge" id="cart-badge">0</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="container">
+        <aside class="sidebar">
+            <div class="filter-section">
+                <h3>Kategorija</h3>
+                <ul id="category-filter">
+                    <li><button class="filter-btn active" data-category="all">Sve</button></li>
+                    <li><button class="filter-btn" data-category="T-Shirts">Majice</button></li>
+                    <li><button class="filter-btn" data-category="Outerwear">Jakne / Duksevi</button></li>
+                    <li><button class="filter-btn" data-category="Pants">Pantalone / Šorcevi</button></li>
+                    <li><button class="filter-btn" data-category="Sweaters">Džemperi</button></li>
+                </ul>
+            </div>
+            
+            <div class="filter-section">
+                <h3>Sortiraj po ceni</h3>
+                <select id="sort-select" class="sort-select">
+                    <option value="default">Podrazumevano</option>
+                    <option value="low-high">Rastuće (Od najjeftinije)</option>
+                    <option value="high-low">Opadajuće (Od najskuplje)</option>
+                </select>
+            </div>
+        </aside>
+
+        <section class="products-container" id="products-grid">
+            <div class="loading">Učitavanje proizvoda...</div>
+        </section>
+    </main>
+
+    <div class="cart-overlay" id="cart-overlay">
+        <div class="cart-modal" id="cart-modal">
+            <div class="cart-header">
+                <h2>Tvoja Korpa</h2>
+                <button class="close-cart" id="close-cart"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="cart-items" id="cart-items">
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Ukupno:</span>
+                    <span id="cart-total-price">0.00 RSD</span>
+                </div>
+                <button class="checkout-btn" onclick="window.location.href='checkout.html'">Završi kupovinu</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
