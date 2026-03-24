@@ -447,5 +447,93 @@ body {
     .sidebar {
         position: static;
         margin-bottom: 2rem;
+        display: none; /* Hidden by default on small mobile, toggleable if needed, or just stack */
     }
+    .sidebar.active {
+        display: block;
+    }
+}
+
+/* Mobile Specific (Phones) */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem 5%;
+    }
+
+    .nav-links {
+        display: none; /* Hide standard links */
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: var(--card-bg);
+        flex-direction: column;
+        padding: 2rem;
+        gap: 1.5rem;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        z-index: 99;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block !important;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--text-primary);
+    }
+
+    .container {
+        padding: 1rem 5%;
+        gap: 1rem;
+    }
+
+    .products-container {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 1rem;
+    }
+
+    .product-image {
+        height: 200px;
+    }
+
+    .product-info {
+        padding: 1rem;
+    }
+
+    .product-name {
+        font-size: 0.95rem;
+    }
+
+    .product-price {
+        font-size: 1rem;
+    }
+
+    .add-to-cart {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.8rem;
+    }
+
+    .cart-modal {
+        max-width: 100%;
+    }
+}
+
+.menu-toggle {
+    display: none;
+}
+
+/* Utilities */
+.pulse {
+    animation: pulse-anim 0.3s ease-in-out;
+}
+
+@keyframes pulse-anim {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
 }
