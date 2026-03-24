@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
         menuToggle.addEventListener('click', () => {
             navLinks.classList.toggle('active');
             
-            // Promena ikonice (bars -> xmark)
+            
             const icon = menuToggle.querySelector('i');
             if (navLinks.classList.contains('active')) {
                 icon.classList.remove('fa-bars');
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Zatvori meni ako se klikne van njega
+
     document.addEventListener('click', (e) => {
         if (navLinks && navLinks.classList.contains('active')) {
             if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
